@@ -5,27 +5,33 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "f4bfce66f9b4913903f7c93c150b62bc",
 "favicon.ico": "18ac2b192ea5ee1bade9f6d9c50d5312",
-"index.html": "73f6d383ebce30cb9604b7ad46776c3c",
-"/": "73f6d383ebce30cb9604b7ad46776c3c",
-"main.dart.js": "96ade0687998206d7c4a34f08d984834",
+"index.html": "f6007e3f3091f5e2cb6bd94079b6909b",
+"/": "f6007e3f3091f5e2cb6bd94079b6909b",
+"main.dart.js": "8d36fae14611021cb501e6a6f59aac1e",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/logo.png": "dbd31f75ace8a1273705a858b1602eb0",
+"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "670a908a259bde13cad6bbb10ca6f18b",
 "assets/images/price150.png": "9390ee077f33f789af0368556eb212fe",
-"assets/images/mm%25202.png": "e67ec654d39c3ffd5d1cdb4fa6821af0",
-"assets/images/mm%25203.png": "300e26de6640ef9dfd29e8eebdb9480d",
-"assets/images/mm%25201.png": "cc1446eaf734cd8250a37372481fe271",
+"assets/images/injiPaste1KgSmallFront.jpeg": "2ac31730912cea7f80a570353ce35d7d",
 "assets/images/sms.png": "734ffc29dfdab25efc735eca417eb907",
-"assets/images/MM%25204.png": "8798716e0155cbf930af57cd16b2ae10",
+"assets/images/injiPaste250gmsSmallFront.jpeg": "61fc29c6caa7f971da826f2f2b4ebf3e",
+"assets/images/injiPaste500GmsSmallBack.jpeg": "fdeec802234652f9adb23ad0c5f457a6",
+"assets/images/injiPaste500gmsSmallFront.jpeg": "0abc5e63b7a1ccb79879a26ac9d3ee55",
 "assets/images/android.png": "bf798fe85a73831de11c5280466dfe85",
-"assets/images/flyer.jpeg": "83bc2525a11203b1fc424c22c382ec2b",
-"assets/images/moms.jpeg": "26d64b39e05ae49611ea10058069a530",
+"assets/images/injiPaste250.jpeg": "9accf96141f139e802acc08a9a98c0ca",
+"assets/images/injiPaste1Kg.jpeg": "3fa800a037722dc9b9bd3453cf91bb21",
+"assets/images/injiPaste1KgSmallBack.jpeg": "74d7fe1d5013e344a891a1438a40b5df",
 "assets/images/logo.png": "dbd31f75ace8a1273705a858b1602eb0",
 "assets/images/ios.png": "2d7e8a18301f3c8870060b6fb456b371",
+"assets/images/injiPaste500.jpeg": "e837ad19dc18397fa7462ff0e29bcec3",
 "assets/images/price45.png": "3fadb831f0f30de30671bd6142f918b3",
+"assets/images/injiPaste250gmsSmallBack.jpeg": "f48a58460360ce7bacdbe048ab871d49",
 "assets/images/price85.png": "41ac5c282c0f45d858716fef575d5e0d",
 "assets/images/whatsapp.png": "61f01f84c9d590ad7eac726e94e609b7",
-"assets/AssetManifest.json": "341a4b64e0361c5a38d606c7e218c4ec",
-"assets/NOTICES": "2fd2206c9e85f3a7e75b12a55a6b1073",
+"assets/AssetManifest.json": "0f8b66c62c7fcd618c25570bfd8c58fc",
+"assets/NOTICES": "a584b12fd9a5acf9b8ad07ee623a4859",
 "assets/FontManifest.json": "c54ba5c5b8e8121e4758f2d3c380c454",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/fonts/Montserrat/Montserrat-Medium.ttf": "c8b6e083af3f94009801989c3739425e",
@@ -173,7 +179,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
